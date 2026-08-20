@@ -1,0 +1,310 @@
+/* ===========================================================
+   PARKIR GACOAN — Tema Dashboard "Midnight Gold"
+   Biru tua elegan + Emas + putih bersih
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+    --gc-navy: #0b1f4d;
+    --gc-navy-deep: #071336;
+    --gc-navy-soft: #13295e;
+    --gc-gold: #f4b400;
+    --gc-gold-soft: #ffd873;
+    --gc-bg: #f3f5fa;
+    --gc-paper: #ffffff;
+    --gc-line: #e1e5f0;
+    --gc-text: #1a2138;
+    --gc-muted: #6b7488;
+    --gc-green: #1f9d55;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: var(--gc-bg);
+    font-family: 'Poppins', system-ui, sans-serif;
+    color: var(--gc-text);
+}
+
+h1, h2, h3, h4, h5, h6, .brand-text strong, .page-title {
+    font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif;
+}
+
+/* ================= SIDEBAR ================= */
+.gacoan-sidebar {
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    width: 264px;
+    background: linear-gradient(190deg, var(--gc-navy) 0%, var(--gc-navy-deep) 100%);
+    color: #fff;
+    z-index: 1030;
+    overflow-y: auto;
+    transition: left .25s ease;
+}
+
+.gacoan-sidebar .brand {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    padding: 1.5rem 1.3rem 1.3rem;
+    margin-bottom: .3rem;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.gacoan-sidebar .logo-box {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gacoan-sidebar .brand-text strong {
+    display: block;
+    font-size: 1.05rem;
+    letter-spacing: .3px;
+    color: #fff;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.gacoan-sidebar .brand-text small {
+    display: block;
+    font-size: .6rem;
+    letter-spacing: 2px;
+    color: var(--gc-gold);
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.gacoan-sidebar .nav-section {
+    padding: 1.1rem 1.3rem .4rem;
+    font-size: .64rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.3);
+    font-weight: 700;
+}
+
+.gacoan-sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    color: rgba(255,255,255,.75);
+    padding: .66rem 1.2rem;
+    margin: 2px 12px;
+    border-radius: 10px;
+    font-size: .87rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.gacoan-sidebar .nav-link i {
+    font-size: 1.05rem;
+    width: 20px;
+    text-align: center;
+}
+
+.gacoan-sidebar .nav-link:hover {
+    background: rgba(255,255,255,.06);
+    color: #fff;
+}
+
+.gacoan-sidebar .nav-link.active {
+    background: var(--gc-gold);
+    color: var(--gc-navy-deep);
+    font-weight: 700;
+}
+
+/* ================= MAIN CONTENT ================= */
+.gacoan-content {
+    margin-left: 264px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.gacoan-topbar {
+    background: var(--gc-paper);
+    padding: 1rem 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gc-line);
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.gacoan-topbar .page-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--gc-navy);
+}
+
+.gacoan-body {
+    padding: 1.6rem 1.7rem 3rem;
+    flex: 1;
+}
+
+/* ================= USER CHIP (topbar) ================= */
+.user-chip {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .3rem .9rem .3rem .3rem;
+    border-radius: 50px;
+    background: var(--gc-bg);
+    border: 1px solid var(--gc-line);
+    cursor: pointer;
+}
+
+.user-chip:hover {
+    background: #eef1f8;
+}
+
+.avatar-mini {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gc-navy), var(--gc-gold));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: .85rem;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* ================= STAT CARDS ================= */
+.stat-card {
+    border-radius: 16px;
+    padding: 1.35rem 1.4rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    min-height: 122px;
+    box-shadow: 0 8px 24px rgba(11,31,77,.14);
+}
+
+.stat-card .stat-icon {
+    position: absolute;
+    right: 16px;
+    top: 14px;
+    font-size: 1.9rem;
+    opacity: .35;
+}
+
+.stat-card h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0 0 2px;
+}
+
+.stat-card .label {
+    font-size: .8rem;
+    opacity: .92;
+    font-weight: 500;
+}
+
+.bg-grad-red    { background: linear-gradient(135deg, var(--gc-navy), var(--gc-navy-soft)); }
+.bg-grad-orange { background: linear-gradient(135deg, var(--gc-gold), #d99400); color: var(--gc-navy-deep) !important; }
+.bg-grad-green  { background: linear-gradient(135deg, var(--gc-green), #146b3a); }
+.bg-grad-dark   { background: linear-gradient(135deg, var(--gc-navy-deep), #020814); }
+
+/* ================= CARDS ================= */
+.card-gacoan {
+    border: 1px solid var(--gc-line);
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(11,31,77,.06);
+    overflow: hidden;
+    background: #fff;
+}
+
+.card-gacoan .card-header {
+    background: var(--gc-navy);
+    border-bottom: none;
+    font-weight: 700;
+    font-size: .92rem;
+    padding: 1rem 1.3rem;
+    color: #fff;
+}
+
+.card-gacoan .card-body {
+    padding: 1.3rem;
+}
+
+.card-gacoan .table thead th {
+    background: var(--gc-bg);
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    color: var(--gc-muted);
+    border-bottom: 1px solid var(--gc-line);
+    font-weight: 700;
+}
+
+/* ================= BUTTONS ================= */
+.btn-gacoan {
+    background: var(--gc-navy);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(11,31,77,.25);
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+
+.btn-gacoan:hover {
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(11,31,77,.35);
+    background: var(--gc-navy-deep);
+}
+
+.btn-outline-gacoan {
+    border: 1.5px solid var(--gc-navy);
+    color: var(--gc-navy);
+    font-weight: 700;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.btn-outline-gacoan:hover {
+    background: var(--gc-navy);
+    color: #fff;
+}
+
+/* ================= ALERTS ================= */
+.alert-auto-dismiss {
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991.98px) {
+    .gacoan-sidebar {
+        left: -264px;
+        box-shadow: 0 0 40px rgba(0,0,0,.4);
+    }
+    .gacoan-sidebar.show {
+        left: 0;
+    }
+    .gacoan-content {
+        margin-left: 0;
+    }
+}
+
+/* ================= PRINT (struk / rekap) ================= */
+@media print {
+    .no-print { display: none !important; }
+    .gacoan-sidebar, .gacoan-topbar { display: none !important; }
+    .gacoan-content { margin-left: 0 !important; }
+    body { background: #fff !important; }
+}
