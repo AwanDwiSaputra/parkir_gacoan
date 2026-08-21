@@ -4,6 +4,7 @@ Aplikasi manajemen parkir **"Parkir Gacoan"**, dibangun dengan PHP native + MySQ
 dan tampilan Bootstrap 5. Sistem mendukung 4 peran pengguna (Admin, Petugas, Owner, Member)
 dengan dashboard dan hak akses masing-masing, lengkap dengan landing page publik, fitur
 booking online, dan testimoni pengguna.
+**Flowchart:**[FlowchartGacoan](https://raw.githubusercontent.com/AwanDwiSaputra/parkir_gacoan/refs/heads/main/flowcart.png)
 
 ## 1. Fitur Utama
 
