@@ -5,6 +5,7 @@ dan tampilan Bootstrap 5. Sistem mendukung 4 peran pengguna (Admin, Petugas, Own
 dengan dashboard dan hak akses masing-masing, lengkap dengan landing page publik, fitur
 booking online, dan testimoni pengguna.
 **Flowchart:**[FlowchartGacoan](https://raw.githubusercontent.com/AwanDwiSaputra/parkir_gacoan/refs/heads/main/flowcart.png)
+**mockup:**[mockupGacoan](https://raw.githubusercontent.com/AwanDwiSaputra/parkir_gacoan/refs/heads/main/kir.png)
 
 ## 1. Fitur Utama
 
